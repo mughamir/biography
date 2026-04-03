@@ -3,19 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mughamir | Digital Presence</title>
+    <title>Mughamir, S.Si | Digital Home</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 40px auto; padding: 0 20px; background: #f4f4f9; }
-        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
-        .card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-top: 20px; }
-        .status { color: #27ae60; font-weight: bold; }
+        :root { --primary: #2c3e50; --accent: #3498db; --bg: #f8f9fa; }
+        body { font-family: 'Inter', system-ui, sans-serif; line-height: 1.6; color: var(--primary); background: var(--bg); margin: 0; padding: 0; }
+        .container { max-width: 850px; margin: 0 auto; padding: 40px 20px; }
+        header { text-align: center; margin-bottom: 50px; }
+        h1 { margin-bottom: 5px; font-size: 2.5rem; letter-spacing: -1px; }
+        .tagline { color: var(--accent); font-weight: 600; text-transform: uppercase; font-size: 0.9rem; }
+        .section { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 25px; border-left: 5px solid var(--accent); }
+        h2 { margin-top: 0; font-size: 1.2rem; display: flex; align-items: center; gap: 10px; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 10px; }
+        .status-badge { display: inline-block; padding: 4px 12px; background: #e1f5fe; color: #0288d1; border-radius: 20px; font-size: 0.8rem; font-weight: bold; }
+        footer { text-align: center; font-size: 0.8rem; color: #7f8c8d; margin-top: 50px; }
     </style>
 </head>
 <body>
-    <h1>Mughamir</h1>
-    <div class="card">
-        <p><strong>Identitas Digital:</strong> Pure Chemistry | Industrial Purification | Smart Farming</p>
-        <p>Status Infrastruktur: <span class="status">● Online (Secure via Proton & GitHub)</span></p>
+
+<div class="container">
+    <header>
+        <h1>Mughamir, S.Si</h1>
+        <div class="tagline">Pure Chemist | Production Specialist | Smart Farming Innovator</div>
+    </header>
+
+    <div class="section">
+        <h2>🔬 Latar Belakang Profesional</h2>
+        <p>Lulusan Kimia Murni (Januari 2026) dengan fokus pada efisiensi sistem dan kualitas hasil. Saat ini berdedikasi sebagai <strong>Production Staff (Purification)</strong> di PT Lestari Mulia Sentosa.</p>
     </div>
+
+    <div class="section">
+        <h2>🛠️ Fokus Keahlian</h2>
+        <ul>
+            <li><strong>Purifikasi Logam Berharga:</strong> Spesialisasi metode Aqua Regia & Elektrolisis.</li>
+            <li><strong>Optimasi Sistem:</strong> Desain alur kerja industri yang aman, hemat biaya, dan berkualitas tinggi.</li>
+            <li><strong>Digital Infrastructure:</strong> Membangun ekosistem maya yang aman dan terdesentralisasi.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>🌱 Proyek Berjalan: Smart Farm 100m²</h2>
+        <div class="status-badge">Phase: Infrastructure Setup</div>
+        <p>Integrasi sistem budidaya Ikan Nila, Sayuran Daun, dan Ayam Petelur dalam satu ekosistem mandiri yang dikontrol secara digital.</p>
+    </div>
+
+    <footer>
+        <p>Keamanan Terjamin melalui Enkripsi Proton & Infrastruktur GitHub-Vercel.</p>
+        <p>&copy; 2026 Mughamir. Seluruh sistem berjalan pada efisiensi maksimal.</p>
+    </footer>
+</div>
+
 </body>
 </html>
