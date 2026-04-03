@@ -1,182 +1,254 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Biografi Saya</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eldo Delta Bagaskara</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
+<style>
+:root {
+  --primary: #6366f1;
+  --secondary: #a855f7;
+}
 
-    body {
-      background: #0f172a;
-      color: white;
-      line-height: 1.6;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
 
-    header {
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      background: linear-gradient(135deg, #3b82f6, #9333ea);
-      padding: 20px;
-    }
+body {
+  background: #0f172a;
+  color: white;
+  overflow-x: hidden;
+}
 
-    header h1 {
-      font-size: 3rem;
-    }
+/* NAVBAR */
+nav {
+  position: fixed;
+  width: 100%;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  backdrop-filter: blur(10px);
+  background: rgba(0,0,0,0.3);
+  z-index: 999;
+}
 
-    header p {
-      margin-top: 10px;
-      opacity: 0.9;
-    }
+nav h2 {
+  font-weight: 600;
+}
 
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
 
-    h2 {
-      margin-bottom: 20px;
-      color: #3b82f6;
-    }
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 20px;
+  background: radial-gradient(circle at top, #1e1b4b, #020617);
+}
 
-    .card {
-      background: #1e293b;
-      padding: 20px;
-      border-radius: 12px;
-      margin-bottom: 20px;
-      transition: 0.3s;
-    }
+.hero img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--primary);
+  box-shadow: 0 0 40px rgba(99,102,241,0.6);
+  animation: float 4s ease-in-out infinite;
+}
 
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-    }
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
 
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
+.hero-text h1 {
+  font-size: 3rem;
+  background: linear-gradient(90deg, #6366f1, #a855f7);
+  -webkit-background-clip: text;
+  color: transparent;
+}
 
-    .skill {
-      background: #3b82f6;
-      padding: 8px 15px;
-      border-radius: 20px;
-      font-size: 0.9rem;
-    }
+.hero-text p {
+  margin-top: 10px;
+  opacity: 0.8;
+}
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #020617;
-      font-size: 0.9rem;
-      opacity: 0.7;
-    }
+/* SECTION */
+section {
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
 
-    /* Responsive */
-    @media(max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
-    }
-  </style>
+h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+/* CARD */
+.card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(15px);
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  transition: 0.4s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+/* SKILLS */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill {
+  padding: 10px 18px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+  font-size: 0.9rem;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #020617;
+  opacity: 0.6;
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- HERO -->
-  <header>
-    <div>
-      <h1>Nama Kamu</h1>
-      <p>Deskripsi singkat tentang dirimu (misalnya: Web Developer | Designer | Student)</p>
-    </div>
-  </header>
+<!-- NAV -->
+<nav>
+  <h2>Bioline</h2>
+  <div>
+    <a href="#about">Tentang</a>
+    <a href="#exp">Pengalaman</a>
+    <a href="#contact">Kontak</a>
+  </div>
+</nav>
 
-  <!-- ABOUT -->
-  <section>
-    <h2>Tentang Saya</h2>
-    <div class="card">
-      <p>
-        Tulis cerita biografimu di sini. Jelaskan siapa kamu, latar belakang,
-        minat, dan tujuan hidupmu.
-      </p>
-    </div>
-  </section>
+<!-- HERO -->
+<section class="hero">
+  <!-- GANTI FOTO DI SINI -->
+  <img src="Saya.jpg" alt="Foto Saya">
 
-  <!-- EXPERIENCE -->
-  <section>
-    <h2>Pengalaman</h2>
+  <div class="hero-text">
+    <h1>Eldo Delta Bagaskara</h1>
+    <p>Chemist | Researcher | Analyst</p>
+  </div>
+</section>
 
-    <div class="card">
-      <h3>Nama Pekerjaan / Kegiatan</h3>
-      <p>Deskripsi singkat pengalaman kamu.</p>
-    </div>
+<!-- ABOUT -->
+<section id="about">
+  <h2>Tentang Saya</h2>
+  <div class="card">
+    <p>
+      Saya adalah manusia yang menyukai segala bentuk keindahan, yang mana itu tertuang dalam berbagai bentuk seni seperti martial arts, art of leadership, art of war, art science dll.
+      Gaya saya yang naturalis membuat saya berorientasi alamiah terhadap segala sesuatu, termasuk mengedepankan kejujuran.
+      Cara saya yang selalu maksimalis dalam segala hal membuat saya mengutamakan kedisiplinan.
+    </p>
+  </div>
+</section>
 
-    <div class="card">
-      <h3>Pengalaman Lain</h3>
-      <p>Detail lainnya.</p>
-    </div>
+<!-- EXPERIENCE -->
+<section id="exp">
+  <h2>Pengalaman</h2>
 
-  </section>
+  <div class="card">
+    <h3>Project / Pekerjaan</h3>
+    <p>Deskripsi pengalaman.</p>
+  </div>
 
-  <!-- SKILLS -->
-  <section>
-    <h2>Keahlian</h2>
-    <div class="skills">
-      <div class="skill">HTML</div>
-      <div class="skill">CSS</div>
-      <div class="skill">JavaScript</div>
-      <div class="skill">Design</div>
-    </div>
-  </section>
+  <div class="card">
+    <h3>Pengalaman Lain</h3>
+    <p>Detail lainnya.</p>
+  </div>
 
-  <!-- CONTACT -->
-  <section>
-    <h2>Kontak</h2>
-    <div class="card">
-      <p>Email: kamu@email.com</p>
-      <p>Instagram: @username</p>
-    </div>
-  </section>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    © 2026 Nama Kamu. All rights reserved.
-  </footer>
+<!-- SKILLS -->
+<section>
+  <h2>Keahlian</h2>
+  <div class="skills">
+    <div class="skill">HTML</div>
+    <div class="skill">CSS</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">UI/UX</div>
+  </div>
+</section>
 
-  <!-- ANIMASI SCROLL -->
-  <script>
-    const cards = document.querySelectorAll('.card');
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Kontak</h2>
+  <div class="card">
+    <p>Email: mughamir.e1@gmail.com</p>
+    <p>Instagram: @mughamir1</p>
+  </div>
+</section>
 
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          entry.target.style.opacity = 1;
-          entry.target.style.transform = "translateY(0)";
-        }
-      });
-    });
+<footer>
+  © 2026 Eldo Delta Bagaskara
+</footer>
 
-    cards.forEach(card => {
-      card.style.opacity = 0;
-      card.style.transform = "translateY(50px)";
-      card.style.transition = "all 0.6s ease";
-      observer.observe(card);
-    });
-  </script>
+<script>
+const cards = document.querySelectorAll('.card');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.style.opacity = 1;
+      entry.target.style.transform = "translateY(0)";
+    }
+  });
+});
+
+cards.forEach(card => {
+  card.style.opacity = 0;
+  card.style.transform = "translateY(50px)";
+  card.style.transition = "all 0.6s ease";
+  observer.observe(card);
+});
+</script>
 
 </body>
 </html>
